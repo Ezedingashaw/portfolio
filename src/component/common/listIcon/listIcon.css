@@ -1,0 +1,41 @@
+.listIcon{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s row-gap;
+    transition-delay: 0s;
+    display: none;
+}
+.listIcon span{
+    display: inline-block;
+    width: 75%;
+    height: 0.3rem;
+    background-color: white;
+    border-radius: 1rem;
+    transition: 0.3s transform;
+    transition-delay: 0.25s;
+}
+.listIcon.active{
+    row-gap: 0;
+}
+.listIcon.active span.two{
+    display: none;
+}
+.listIcon.active span.one{
+    transform: rotate(-50deg) translate(-2px);
+    width: 70%;
+}
+.listIcon.active span.three{
+    transform: rotate(50deg) translate(-2px);
+    width: 70%;
+}
+@media screen and (max-width: 600px){
+    .listIcon{
+        display: flex;
+    }
+}

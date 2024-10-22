@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import { Fragment, useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import NavBar from './component/navBar/navBar';
+import ListIcon from './component/common/listIcon/listIcon';
+import Hero from './component/hero/hero';
+import AboutMe from './component/aboutMe/aboutMe';
+import Experience from './component/experience/experience';
+import Projects from './component/projects/projects';
+import Contact from './component/contact/contact';
+import Footer from './component/footer/footer';
+import WelcomeLoader from './component/welcomeLoader/welcomeLoader';
+import NotFound from './component/common/notFound';
 
 function App() {
+
+  const [display, setDisplay] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDisplay(1);
+    },5000)
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {display ? (<Routes>
+        <Route path='' element={(<Fragment>
+        <NavBar />
+        <Hero />
+        <AboutMe />
+        <Experience />
+        <Projects />
+        <Contact />
+        <Footer />
+        </Fragment>)} />
+        <Route path='/*' element={<NotFound/>} />
+      </Routes> ) : (<WelcomeLoader />)}
+    </Fragment>
   );
 }
 

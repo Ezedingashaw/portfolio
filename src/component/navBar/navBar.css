@@ -1,0 +1,103 @@
+.navBar{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(49, 49, 109);
+}
+.navBar span.logo{
+    display: inline-block;
+    position: relative;
+    height: 80%;
+}
+.navBar span.logo img{
+    height: 5rem;
+    width: 25rem;
+    object-fit: cover;
+}
+.navBar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.navBar ul li{
+    margin-right: 3rem;
+}
+.navBar ul li a{
+    text-decoration: none;
+    background: linear-gradient(-45deg,#f727ca, rgb(241, 202, 202));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s background;
+}
+.navBar ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.2rem;
+    width: 0;
+    transition: 0.3s width;
+    background: linear-gradient(to right, #ff29d1, #7103cb);
+}
+.navBar ul li a:hover::after{
+    width: 100%;
+}
+.navBar ul li a:hover{
+    background: linear-gradient(to right, #ff29d1, #7103cb);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 900px){
+    .navBar{
+        justify-content: space-between;
+    }
+    .navBar span.logo{
+        left: -3rem;
+    }
+}
+@media screen and (max-width: 800px){
+    .navBar ul li a{
+        font-size: 1.7rem;
+    }
+}
+@media screen and (max-width: 600px){
+    .navBar span.logo{
+        left: -5rem;
+    }
+    .navBar ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: -100%;
+        top: 100%;
+        width: 100%;
+        transition: 0.3s right;
+        transition-delay: 0.1s;
+        background-color: black;
+    }
+    .navBar ul.active{
+        right: 0;
+    }
+    .navBar ul li{
+        width: 100%;
+        text-align: center;
+    }
+    .navBar ul li a{
+        display: inline-block;
+        color: white;
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+    .navBar ul li a:active,.navBar ul li a:focus, .navBar ul li a:hover{
+        background-color: rgba(75, 75, 75, 0.6);
+    }
+}
