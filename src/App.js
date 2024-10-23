@@ -21,6 +21,7 @@ function App() {
       setDisplay(1);
     },5000)
   }, [])
+  console.log("Environment",process.env.REACT_APP_API)
   return (
     <Fragment>
       {display ? (<Routes>

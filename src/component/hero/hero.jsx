@@ -33,7 +33,7 @@ const Hero = () => {
                 <h2>Full-Stack Developer</h2>
                 <div className="cvInfoCont">
                     <a href="/cv.pdf" download="MY_CV.pdf" className="downloadCV">Download CV</a>
-                    <a href="" className="contactInfo">Contact info</a>
+                    <a href="/#contact" className="contactInfo">Contact info</a>
                 </div>
                 <div className="socialMedia">
                 <a href="https://"><i class="fa-brands fa-linkedin"></i></a>
