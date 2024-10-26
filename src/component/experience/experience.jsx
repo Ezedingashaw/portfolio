@@ -19,15 +19,12 @@ const Experience = () => {
             once: true
         });
 
-        
-        console.log(technologies);
                 const data = technologies;
                  setExperience(data);
                 const frontTechnology = technologyByStack(data, "Front");
                 const backTechnology = technologyByStack(data, "Back");
                 setFrontTechnology(frontTechnology);
                 setBackTechnology(backTechnology);
-                console.log(frontTechnology, backTechnology);
     }, []);
 
     return ( 

@@ -1,6 +1,7 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import Modal from 'react-modal';
 import AOS from 'aos';
+import pro from '../../services/projects.js';
 import './projects.css';
 import axios from 'axios';
 import Loading from '../loading/loading';
@@ -25,16 +26,10 @@ const Projects = () => {
             }
         };
 
-        const fetch = async () => {
-            try {
-                const { data } = await axios.get(`${process.env.REACT_APP_API}/projects`, headers);
-                setProjects(data);
-            } catch (err) {
-                console.log(err);
-            }
-        }
 
-        fetch();
+        const data = pro;
+        setProjects(data);
+        console.log(project);
     },[]);
 
     const handlemodalIsOpen = () => {
@@ -82,13 +77,13 @@ const Projects = () => {
         projectClone[1] = project.image_one;
         projectClone[2] = project.image_two;
         projectClone[3] = project.image_three;
-        projectClone[4] = project.image_four;;
+        projectClone[4] = project.image_four;
         setProject(projectClone);
         console.log("Project", projectClone);
     };
     
     const increaseIndex = () => {
-        if (index === 3) return;
+        if (index === 4) return;
         const i = index + 1;
         setIndex(i);
     };
