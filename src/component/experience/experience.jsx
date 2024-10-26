@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AOS from 'aos';
+import technologies from '../../services/technologies.js';
 import './experience.css';
 import 'aos/dist/aos.css';
 import Loading from '../loading/loading';
@@ -18,21 +19,15 @@ const Experience = () => {
             once: true
         });
 
-        const fetch = async () => {
-            try {
-                const { data } = await axios.get(`${process.env.REACT_APP_API}/skills`);
-                setExperience(data);
+        
+        console.log(technologies);
+                const data = technologies;
+                 setExperience(data);
                 const frontTechnology = technologyByStack(data, "Front");
                 const backTechnology = technologyByStack(data, "Back");
                 setFrontTechnology(frontTechnology);
                 setBackTechnology(backTechnology);
                 console.log(frontTechnology, backTechnology);
-            } catch (err) {
-                console.log(err);
-            }
-        }
-
-        fetch();
     }, []);
 
     return ( 
