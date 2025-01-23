@@ -1,0 +1,159 @@
+section.aboutMe{
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+section.aboutMe .aboutContent{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+section.aboutMe .aboutMeCont{
+    text-align: center;
+    margin-bottom: 7rem;
+}
+section.aboutMe .aboutMeCont p{
+    font-size: 1.4rem;
+}
+section.aboutMe .aboutMeCont h2{
+    font-size: 4rem;
+    text-decoration: underline;
+    background: linear-gradient(-45deg,#f727ca, rgb(241, 202, 202));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section.aboutMe .aboutContent .imageCont{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+section.aboutMe .aboutContent .imageCont .image {
+    height: 80%;
+    width: 70%;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+section.aboutMe .aboutContent .imageCont .image::after{
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(118, 124, 130, 0.5);
+    transition: 0.3s height;
+}
+section.aboutMe .aboutContent .imageCont .image:hover::after{
+    height: 0;
+}
+section.aboutMe .aboutContent .imageCont .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+section.aboutMe .aboutContent .skillDiscription{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+section.aboutMe .aboutContent .skillDiscription div{
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+    row-gap: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 1rem 0.01rem rgba(230, 5, 181, 0.7);
+}
+section.aboutMe .aboutContent .skillDiscription div i{
+    font-size: 2rem;
+}
+section.aboutMe .aboutContent .skillDiscription div h3{
+    font-size: 2rem;
+    background: linear-gradient(-45deg,#f727ca, rgb(241, 202, 202));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section.aboutMe .aboutContent .skillDiscription div p{
+    font-size: 1.5rem;
+    color: darkgray;
+    font-weight: bold;
+    background: linear-gradient(-45deg,#f727ca, rgb(241, 202, 202));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section.aboutMe .aboutContent .skillDiscription div p.myDiscText{
+    background: linear-gradient(-45deg,black, black);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section.aboutMe .aboutContent .skillDiscription .mySkillAndEducationBreif{
+    grid-column: 1/3;
+    border: none;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 0;
+    border: none;
+box-shadow: none;
+}
+section.aboutMe .aboutContent .skillDiscription .mySkillAndEducationBreif p{
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 400;
+    line-height: 1.4;
+}
+@media screen and (max-width: 1000px){
+    section.aboutMe .aboutContent{
+        width: 100%;
+        padding: 2rem;
+    }
+    section.aboutMe .aboutContent .skillDiscription .mySkillAndEducationBreif p{
+        line-height: 1.2;
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 800px){
+    section.aboutMe .aboutContent .imageCont .image {
+        height: 80%;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 700px){
+    section.aboutMe{
+        margin-top: 0;
+    }
+    section.aboutMe .aboutContent .imageCont {
+        display: none;
+    }
+    section.aboutMe .aboutContent{
+        grid-template-columns: repeat(1,1fr);
+    }
+    section.aboutMe .aboutContent .skillDiscription .mySkillAndEducationBreif p{
+        line-height: 1.4;
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+}
+@media screen and (max-width: 500px){
+    section.aboutMe .aboutContent .skillDiscription{
+        grid-template-columns: repeat(1,1fr);
+    }
+    section.aboutMe .aboutContent .skillDiscription .mySkillAndEducationBreif{
+        grid-column: 1/2;
+    }
+}

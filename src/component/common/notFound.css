@@ -1,0 +1,33 @@
+section.notFound{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgrey;
+}
+section.notFound div.cont{
+    width: 40rem;
+    height: 15rem;
+    background-color: darkgrey;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.notFound div.cont div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+section.notFound div.cont h1.errorNumber{
+    font-size: 6rem;
+}
+section.notFound div.cont h2{
+    font-size: 3rem;
+}
+section.notFound div.cont p{
+    font-size: 2rem;
+}

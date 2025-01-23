@@ -1,0 +1,119 @@
+section.experience{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 10rem;
+    margin-bottom: 3rem;
+}
+section.experience .experienceText{
+    text-align: center;
+}
+section.experience p{
+    font-size: 1.4rem;
+}
+section.experience h2.expHeader{
+    font-size: 4rem;
+    text-decoration: underline;
+    background: linear-gradient(-45deg,#f727ca, rgb(241, 202, 202));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section.experience .skills{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+section.experience .skills .frontEndCont, section.experience .skills .backEndCont{
+    /* border: 0.2rem solid #f727ca; */
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 2rem;
+    border-radius: 1rem;
+    padding: 4rem 2rem;
+    box-shadow: 0.2rem 0.2rem 1rem 0.01rem rgba(230, 5, 181, 0.7);
+}
+section.experience .skills .frontEndCont h2, section.experience .skills .backEndCont h2{
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 400;
+    color: rgb(118, 118, 118);
+    background: linear-gradient(-45deg,#f727ca, rgb(241, 202, 202));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section.experience .frontEndCont .cont, section.experience .backEndCont .cont{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: 3rem;
+    margin-top: 3rem;
+    position: relative;
+    width: 100%;
+}
+section.experience div img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+}
+@media screen and (max-width: 1060px){
+    section.experience .skills .frontEndCont, section.experience .skills .backEndCont{
+        width: 40rem;
+
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+}
+@media screen and (max-width: 860px){
+    section.experience .skills .frontEndCont, section.experience .skills .backEndCont{
+        width: 35rem;
+
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+}
+@media screen and (max-width: 720px){
+    section.experience .skills .frontEndCont, section.experience .skills .backEndCont{
+        width: 30rem;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+}
+@media screen and (max-width: 640px){
+    section.experience{
+        row-gap: 5rem;
+    }
+    section.experience .skills{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        row-gap: 3rem;
+    }
+    section.experience .skills .frontEndCont, section.experience .skills .backEndCont{
+        width: 80%;
+        
+    }
+}
+@media screen and (max-width: 500px){
+    section.experience{
+        margin-top: 2rem;
+        row-gap: 5rem;
+    }
+    section.experience .skills{
+        padding: 1rem 2rem;
+    }
+    section.experience .skills .frontEndCont, section.experience .skills .backEndCont{
+        width: 100%;
+        height: 25rem;
+    }
+    
+}

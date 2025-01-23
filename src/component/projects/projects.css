@@ -1,0 +1,211 @@
+section.projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem;
+    flex-direction: column;
+}
+section.projects .projectsText{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+section.projects .projectsText p{
+    font-size: 1.5rem;
+}
+section.projects .projectsText h2{
+    font-size: 4rem;
+    text-decoration: underline;
+    background: linear-gradient(-45deg,#f727ca, rgb(241, 202, 202));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section.projects .projectContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    justify-items: center;
+}
+.projectContainer .project{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem 2rem 0rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    row-gap: 2rem;
+    box-shadow: 0.3rem 0.3rem 1rem 0.01rem rgba(230, 5, 181, 0.7);
+}
+.projectContainer .project .image{
+    width: 85%;
+    height: 25rem;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+.projectContainer .project .links{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+}
+.projectContainer .project .links a{
+   text-decoration: none;
+   color: black;
+   font-size: 1.4rem;
+   box-shadow: -0.2rem 0.1rem 0.2rem 0.05rem #f727ca;
+   padding: 1rem 2rem;
+   border-radius: 2rem;
+   position: relative;
+   overflow: hidden;
+   transition: 0.3s color;
+}
+.projectContainer .project .links a.gitHub::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(-45deg,#f727ca, rgb(241, 202, 202));
+    z-index: -1;
+    transition: 0.3s width;
+}
+.projectContainer .project .links a.liveDemo::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(-45deg,#f727ca, rgb(241, 202, 202));
+    z-index: -1;
+    transition: 0.3s width;
+}
+.projectContainer .project .links a:hover{
+    color: white;
+}
+.projectContainer .project .links a.gitHub:hover::after{
+    width: 100%;
+}
+.projectContainer .project .links a.liveDemo:hover::after{
+    width: 100%;
+}
+.projectContainer .project .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.ReactModal__Body--open {
+    overflow: hidden;
+}
+.ReactModal__Overlay--after-open{
+    min-height: 100vh;
+    overflow-y: scroll;
+    padding-top: 20rem;
+}
+.modalDisplayContainer{
+    width: 70rem;
+    min-height: 70vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    row-gap: 1rem;
+}
+.modalDisplayContainer .left, .modalDisplayContainer .right{
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(67, 67, 67, 0.5);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.modalDisplayContainer .left{
+    left: 0;
+    top: 20%;
+}
+.modalDisplayContainer .cancle{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    font-size: 2rem;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.modalDisplayContainer .right{
+    right: 0;
+    top: 20%;
+}
+.modalDisplayContainer .imageCont{
+    width: 100%;
+    height: 30rem;
+}
+.modalDisplayContainer .imageCont img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.modalDisplayContainer .discription{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem 2rem;
+}
+.modalDisplayContainer .discription h2{
+    font-size: 2.5rem;
+}
+.modalDisplayContainer .discription p{
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 1260px){
+    section.projects .projectContainer{
+        grid-template-columns: repeat(3,auto);
+        row-gap: 2rem;
+    }
+}
+@media screen and (max-width: 960px){
+    section.projects{
+        padding: 5rem 10rem;
+    }
+    section.projects .projectContainer{
+        grid-template-columns: repeat(2,auto);
+        row-gap: 2rem;
+    }
+}
+@media screen and (max-width: 830px){
+    section.projects{
+        padding: 5rem 6rem;
+    }
+}
+@media screen and (max-width: 750px){
+    section.projects{
+        padding: 5rem 2rem;
+    }
+    .projectContainer .project{
+        width: 25rem;
+    }
+    .modalDisplayContainer{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 570px){
+    section.projects .projectContainer{
+        grid-template-columns: repeat(1,auto);
+    }
+    .projectContainer .project{
+        width: 30rem;
+    }
+}
