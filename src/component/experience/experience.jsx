@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AOS from 'aos';
-<<<<<<< HEAD
-=======
 import technologies from '../../services/technologies.js';
->>>>>>> 697d507eef47445363a594a3d9b134ca41ec3924
 import './experience.css';
 import 'aos/dist/aos.css';
 import Loading from '../loading/loading';
@@ -25,8 +22,8 @@ const Experience = () => {
 
         const fetch = async () => {
             try {
-                const { data } = await axios.get(`${process.env.REACT_APP_API}/skills`);
-                setExperience(data);
+                // const { data } = await axios.get(`${process.env.REACT_APP_API}/skills`);
+                // setExperience(data);
 
                 const data = technologies;
                  setExperience(data);
