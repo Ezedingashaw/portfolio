@@ -113,7 +113,11 @@ section.experience div img{
     }
     section.experience .skills .frontEndCont, section.experience .skills .backEndCont{
         width: 100%;
+<<<<<<< HEAD
         height: 25rem;
+=======
+        min-height: 25rem;
+>>>>>>> 697d507eef47445363a594a3d9b134ca41ec3924
     }
     
 }

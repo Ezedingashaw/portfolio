@@ -1,6 +1,10 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import Modal from 'react-modal';
 import AOS from 'aos';
+<<<<<<< HEAD
+=======
+import pro from '../../services/projects.js';
+>>>>>>> 697d507eef47445363a594a3d9b134ca41ec3924
 import './projects.css';
 import axios from 'axios';
 import Loading from '../loading/loading';
@@ -25,6 +29,7 @@ const Projects = () => {
             }
         };
 
+
         const fetch = async () => {
             try {
                 const { data } = await axios.get(`${process.env.REACT_APP_API}/projects`, headers);
@@ -35,6 +40,11 @@ const Projects = () => {
         }
 
         fetch();
+
+        const data = pro;
+        setProjects(data);
+        console.log(project);
+
     },[]);
 
     const handlemodalIsOpen = () => {
@@ -74,6 +84,7 @@ const Projects = () => {
             imageFour: "",
             discription: "",
         }];
+<<<<<<< HEAD
         projectClone[0].id = project.id;
         projectClone[0].title = project.title;
         projectClone[0].github = project.github;
@@ -83,12 +94,27 @@ const Projects = () => {
         projectClone[2] = project.imageTwo;
         projectClone[3] = project.imageThree;
         projectClone[4] = project.imageFour;;
+=======
+        projectClone[0].id = project._id;
+        projectClone[0].title = project.project_title;
+        projectClone[0].github = project.github_link;
+        projectClone[0].demo = project.demo_link;
+        projectClone[0].discription = project.discription
+        projectClone[1] = project.image_one;
+        projectClone[2] = project.image_two;
+        projectClone[3] = project.image_three;
+        projectClone[4] = project.image_four;
+>>>>>>> 697d507eef47445363a594a3d9b134ca41ec3924
         setProject(projectClone);
         console.log("Project", projectClone);
     };
     
     const increaseIndex = () => {
+<<<<<<< HEAD
         if (index === 3) return;
+=======
+        if (index === 4) return;
+>>>>>>> 697d507eef47445363a594a3d9b134ca41ec3924
         const i = index + 1;
         setIndex(i);
     };
@@ -116,7 +142,11 @@ const Projects = () => {
                                     initializeProject(project);
 
                                 }} className="image">
+<<<<<<< HEAD
                             <img src={project.imageOne} alt="" />
+=======
+                            <img src={project.image_one} alt="" />
+>>>>>>> 697d507eef47445363a594a3d9b134ca41ec3924
                         </div>
                         <div className="links">
                             <a href={`${project.github}`} target='_blank' className="gitHub">GitHub</a>
