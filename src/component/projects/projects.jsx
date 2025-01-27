@@ -5,6 +5,7 @@ import pro from '../../services/projects.js';
 import './projects.css';
 import axios from 'axios';
 import Loading from '../loading/loading';
+import projects_ from '../../services/projects.js';
 
 const Projects = () => {
 
@@ -30,7 +31,7 @@ const Projects = () => {
         const fetch = async () => {
             try {
                 const { data } = await axios.get(`${process.env.REACT_APP_API}/projects`, headers);
-                setProjects(data);
+                setProjects(projects_);
             } catch (err) {
                 console.log(err);
             }

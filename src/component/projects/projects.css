@@ -130,6 +130,9 @@ section.projects .projectContainer{
     border-radius: 50%;
     cursor: pointer;
 }
+.modalDisplayContainer .left:hover, .modalDisplayContainer .right:hover{
+    background-color: rgba(67, 67, 67, 0.3);
+}
 .modalDisplayContainer .left{
     left: 0;
     top: 20%;
@@ -140,11 +143,17 @@ section.projects .projectContainer{
     height: 4rem;
     color: white;
     font-size: 2rem;
+    margin: 0.5rem;
     right: 0;
     display: flex;
     align-items: center;
+    background-color: red;
+    border-radius: 50%;
     justify-content: center;
     cursor: pointer;
+}
+.modalDisplayContainer .cancle:hover{
+    background-color: rgb(255, 99, 99);
 }
 .modalDisplayContainer .right{
     right: 0;
