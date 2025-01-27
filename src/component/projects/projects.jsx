@@ -95,6 +95,7 @@ const Projects = () => {
         setProject(projectClone);
         console.log("Project", projectClone);
     };
+    console.log("ProjectsClone", project);
     
     const increaseIndex = () => {
 
@@ -110,7 +111,7 @@ const Projects = () => {
 
     Modal.setAppElement('#root');
 
-    return ( 
+    return (
         <Fragment>
             <section className="projects">
                 <div data-aos="fade-up" className="projectsText"  id="projects">
@@ -131,8 +132,8 @@ const Projects = () => {
 
                         </div>
                         <div className="links">
-                            <a href={`${project.github}`} target='_blank' className="gitHub">GitHub</a>
-                            <a href={`${project.demo}`} target='_blank' className="liveDemo">Live Demo</a>
+                            <a href={`${project.github_link}`} target='_blank' className="gitHub">GitHub</a>
+                            <a href={`${project.demo_link}`} target='_blank' className="liveDemo">Live Demo</a>
                         </div>
                     </div>
                         )
